@@ -8,6 +8,52 @@ import { Award, TrendingUp } from "lucide-react";
 export function Achievements() {
   return (
     <section className="py-20 px-4">
+          {/* Certifications — wider container to prevent title wrapping */}
+      <div className="container mx-auto max-w-5xl px-4">
+
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={ANIMATION_VARIANTS.fadeUp}
+          className="text-center mt-20 mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+            <span className="gradient-text">Certifications</span>
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Recognized credentials across leadership, enterprise platforms, and data engineering.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {certificationsData.map((cert, index) => (
+            <motion.div
+              key={cert.id}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={ANIMATION_VARIANTS.fadeUp}
+              transition={{ delay: index * 0.2 }}
+              className="relative"
+            >
+              <div className="p-6 rounded-xl border bg-card hover:shadow-lg transition-all">
+                <div className="flex items-start gap-4">
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold mb-1">{cert.name}</h3>
+                    <p className="text-primary font-medium mb-3">{cert.issuer}</p>
+                    <div className="flex items-center gap-2">
+                      <Award className="h-4 w-4 text-primary flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground">{cert.credential}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+      </div>
       <div className="container mx-auto max-w-4xl">
 
         {/* Leadership Header */}
@@ -16,7 +62,7 @@ export function Achievements() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={ANIMATION_VARIANTS.fadeUp}
-          className="text-center mb-12"
+          className="text-center mt-20 mb-12"
         >
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
             <span className="gradient-text">Leadership</span>
@@ -69,52 +115,7 @@ export function Achievements() {
 
       </div>
 
-      {/* Certifications — wider container to prevent title wrapping */}
-      <div className="container mx-auto max-w-5xl px-4">
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={ANIMATION_VARIANTS.fadeUp}
-          className="text-center mt-20 mb-12"
-        >
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="gradient-text">Certifications</span>
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Recognized credentials across leadership, enterprise platforms, and data engineering.
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {certificationsData.map((cert, index) => (
-            <motion.div
-              key={cert.id}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={ANIMATION_VARIANTS.fadeUp}
-              transition={{ delay: index * 0.2 }}
-              className="relative"
-            >
-              <div className="p-6 rounded-xl border bg-card hover:shadow-lg transition-all">
-                <div className="flex items-start gap-4">
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-1">{cert.name}</h3>
-                    <p className="text-primary font-medium mb-3">{cert.issuer}</p>
-                    <div className="flex items-center gap-2">
-                      <Award className="h-4 w-4 text-primary flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{cert.credential}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-      </div>
 
       <div className="container mx-auto max-w-4xl px-4">
 
@@ -130,7 +131,7 @@ export function Achievements() {
             <span className="gradient-text">Milestones</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Milestones.
+            A collection of milestones I have achieved from special internships, graduating with my business degree, and evolving as a leader.
           </p>
         </motion.div>
 

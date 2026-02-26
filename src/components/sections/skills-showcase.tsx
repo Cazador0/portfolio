@@ -70,7 +70,7 @@ export function SkillsShowcase() {
             <span className="gradient-text">Technical Skills</span>
           </h2>
           <p className="mt-3 max-w-xl text-sm md:text-base text-zinc-400">
-            Languages, frameworks, and platforms I build with across{" "}
+            Languages, frameworks, and platforms I engineered across{" "}
             <span className="font-semibold text-zinc-100">enterprise</span> and{" "}
             <span className="font-semibold text-zinc-100">personal</span> projects.
           </p>
