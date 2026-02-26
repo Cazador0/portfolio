@@ -96,7 +96,7 @@ export const milestonesData: Milestones[] = [
     id: "dale-carnegie",
     title: "Leading Tech Teams",
     organization: "Dale Carnegie",
-    description: "In today's fast past Software Development Life Cycle, and the needs to meet business needs requires dedicated leadership. Leadership through agile methodologies, accountability, collaboration, transparency, and trust. ",
+    description: "Today's fast past Software Development Life Cycle creates a need for generative business models lead by agile leaders to meet stakeholder and team member expectations. Leadership through agile methodologies, accountability, collaboration, transparency, and trust is essential to delivery. ",
     impact: [],
   },
 
