@@ -34,7 +34,7 @@ export function FloatingSocials() {
       animate={{ opacity: 1, ...(isMobile ? { y: 0 } : { x: 0 }) }}
       transition={{ delay: 1, duration: 0.5 }}
       className="fixed
-        top-20 left-1/2 -translate-x-1/2 flex-row
+        top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex-row
         md:top-1/2 md:left-2 md:-translate-y-1/2 md:translate-x-0 md:flex-col
         lg:left-3 xl:left-5
         flex gap-2 lg:gap-3 xl:gap-4 z-50"
