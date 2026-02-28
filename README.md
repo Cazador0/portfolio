@@ -1,204 +1,145 @@
-# Hunter's Portfolio Website
+# Hunter Baucum — Portfolio Website
 
-A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS v4, designed to showcase my journey, projects, community work, and technical profile.
+A modern, dark-themed portfolio built with **Next.js 15**, **React 19**, **Tailwind CSS 4**, and **Framer Motion**. Features 3D star fields, smooth page transitions, and a fully responsive design.
 
-🏆 Status: COMPLETE & PRODUCTION-READY
+![Next.js](https://img.shields.io/badge/Next.js-15.4-black?logo=next.js)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
 
-All phases completed successfully.
-The portfolio is fully optimized for performance, SEO, and real-world usage.
+---
 
-🚀 Quick Start
+## Live Sections
+
+| Route | Description |
+|-------|-------------|
+| `/` | Hero with 3D star background, typewriter tagline, and floating particles |
+| `/experience` | Timeline of professional roles at AAA, Cognizant, and WOS |
+| `/projects` | Project cards with hover-expand detail, starry backdrop, and tech badges |
+| `/accomplishments` | Certifications, leadership highlights, and career milestones |
+| `/about` | Bio, education, and profile photo |
+
+---
+
+## Tech Stack
+
+**Framework & Language** — Next.js 15 (App Router, Turbopack), React 19, TypeScript 5
+
+**Styling** — Tailwind CSS 4, CSS custom properties (oklch color palette), `tw-animate-css`
+
+**Animation** — Framer Motion, GSAP, custom scroll-reveal / parallax / typewriter / magnetic-button components
+
+**3D** — Three.js via `@react-three/fiber` + `@react-three/drei` (star field, floating orb)
+
+**UI Primitives** — Radix UI (Dialog, Tabs, Tooltip, Avatar, Progress), shadcn/ui (new-york style), Lucide icons
+
+**SEO** — JSON-LD structured data, Open Graph / Twitter meta, sitemap, robots.txt
+
+**Theme** — Dark-only with a lavender + teal green accent palette
+
+---
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router pages & layouts
+│   ├── (routes)/           # About, Experience, Projects, Accomplishments
+│   ├── layout.tsx          # Root layout with ThemeProvider
+│   ├── page.tsx            # Home (Hero section)
+│   └── metadata.ts         # SEO metadata factory
+├── components/
+│   ├── 3d/                 # Three.js star background (lazy-loaded)
+│   ├── animations/         # Scroll-reveal, parallax, typewriter, tilt, wave, etc.
+│   ├── common/             # Floating socials, scroll-to-top, optimized image
+│   ├── layout/             # Navbar, Footer, PageWrapper with route transitions
+│   ├── sections/           # Hero, About, Experience, Projects, Achievements, Skills
+│   ├── seo/                # JSON-LD component
+│   └── ui/                 # shadcn primitives + custom badges, shooting stars
+├── data/                   # Static data: projects, experience, achievements, skills
+├── hooks/                  # useRouteChange, useSmoothScroll
+├── lib/                    # Constants, utils (cn helper)
+└── types/                  # Global TypeScript definitions
+```
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+- **Node.js** ≥ 18
+- **npm** (or your preferred package manager)
+
+### Install & Run
+
+```bash
+# Clone the repo
+git clone https://github.com/Cazador0/Hunter-portfolio-website.git
+cd Hunter-portfolio-website
+
 # Install dependencies
 npm install
 
-# Run development server
+# Start the dev server (Turbopack)
 npm run dev
+```
 
-# Build for production
-npm run build
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
+### Available Scripts
 
-Visit:
-👉 http://localhost:3000
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server with Turbopack |
+| `npm run build` | Production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | Run ESLint |
+| `npm run type-check` | TypeScript type checking (no emit) |
+| `npm run format` | Prettier formatting |
 
-✨ Features Implemented
-Phase 1: Core Components ✅
+---
 
-Responsive Navigation Bar
+## Configuration
 
-Mobile-first design with hamburger menu
+**Theme colors** are defined as CSS custom properties in `src/app/globals.css` using oklch. The palette centers on:
 
-Smooth animations using Framer Motion
+- **Teal** `oklch(0.71 0.11 180)` — primary accent
+- **Lavender** `oklch(0.84 0.05 290)` — secondary accent
+- **Dark background** `oklch(0.15 0.02 260)`
 
-Light/Dark mode toggle (next-themes)
+**Site metadata** (name, links, description) lives in `src/lib/constants.ts` under `SITE_CONFIG`.
 
-Hero Section
+**Navigation items** are configured in the same file under `NAV_ITEMS`.
 
-Gradient heading with my name: Hunter Baucum
+---
 
-AI / Tech themed design aesthetic
+## Deployment
 
-Call-to-action buttons (Projects / Contact)
+The site is optimized for **Vercel** out of the box (Next.js defaults). To deploy elsewhere, run `npm run build` and serve the `.next` output with `npm run start`, or export as static if your hosting requires it.
 
-Scroll-down indicator
+Key production optimizations already in place:
 
-Footer
+- Console statements removed in production builds
+- CSS optimization enabled via `experimental.optimizeCss`
+- Image formats set to AVIF/WebP with responsive device sizes
+- Security headers (X-Frame-Options, X-Content-Type-Options, Referrer-Policy)
+- Font caching with immutable `Cache-Control`
 
-Personal contact details
+---
 
-Social links (GitHub, LinkedIn)
+## Adding Content
 
-Quick navigation links
+**New project** — add an entry to `src/data/projects.ts` following the `Project` interface.
 
-Phase 2: Content Sections ✅
+**New experience** — add an entry to `src/data/experience.ts`.
 
-About Section
+**New achievement or certification** — add to `src/data/achievements.ts`.
 
-Personal introduction & journey
+**New skill icon** — add to the `skills` array in `src/components/sections/skills-showcase.tsx`.
 
-Education: Lloyd Institute of Engineering & Technology
+---
 
-Career + community summary
+## License
 
-Skills Section
-
-Categorized tech stack
-
-Frontend, Backend, AI, Tools, and Community skills
-
-Animated progress indicators
-
-Experience Section
-Includes real experiences:
-
-IBM AI Intern
-
-DevSphereIndia – Event Manager
-
-MakeIntern – App Development Intern
-
-Student Ambassador – LetsUpgrade
-
-Co-founder – Coders Circle
-
-Projects Gallery
-Featuring:
-
-SyncVerse01 — AI Roadmap Generator
-
-Coders Circle Community Dashboard
-
-Student Result Analyzer
-
-Portfolio V1 (HTML, CSS, JS)
-
-Achievements Section
-Includes:
-
-Hack India — Top 15
-
-ZeroDay Apocalypse (GDSC) — Top 15
-
-Hack With Uttar Pradesh — Top 50 / 2500 Teams
-
-Co-founder of Coders Circle — 1500+ members
-
-Phase 3: Interactive Features ✅
-
-Contact Form
-
-Zod validation
-
-Real-time error handling
-
-Success confirmation states
-
-UI Enhancements
-
-Motion animations with Framer Motion
-
-Floating Social Icons
-
-Scroll-to-top button
-
-Modern glass-morphism effects
-
-Custom 404 Page
-
-Phase 4–5: Performance & SEO ✅
-
-SEO optimized with:
-
-Dynamic meta tags
-
-Open Graph + Twitter preview
-
-JSON-LD Structured data
-
-Sitemap & robots.txt
-
-Performance features:
-
-Image optimization
-
-Lazy loading
-
-Code splitting
-
-Production builds optimized for deployment
-
-🛠 Tech Stack
-
-Framework: Next.js 15 (App Router)
-
-Language: TypeScript
-
-Styling: Tailwind CSS v4
-
-Animation: Framer Motion
-
-3D / Visuals: Three.js + React Three Fiber
-
-Auth / DB (optional): Supabase
-
-UI Components: shadcn/ui + Aceternity UI inspired
-
-Icons: Lucide React
-
-Theme Management: next-themes
-
-🎨 Theme & Design
-
-Primary Color: Tech Blue / Indigo
-
-Accent Color: Neon Teal
-
-Theme: Dark-first with light mode support
-
-Inspired by modern startup portfolios + developer SaaS UI
-
-📁 Project Structure
-src/
-├── app/              # Next.js app directory
-├── components/       # React components
-│   ├── ui/          # Reusable UI components
-│   ├── layout/      # Navbar, Footer, Layout
-│   ├── sections/    # Main page sections
-│   └── 3d/          # Three.js visual components
-├── data/            # Static content (projects, skills, experience)
-├── lib/             # Utilities and constants
-└── types/           # TypeScript interfaces
-
-🌍 Live Projects Integrated
-
-SyncVerse AI Roadmap Generator
-
-Coders Circle Community Dashboard
-
-Student Result Analyzer
-
-Personal Portfolio V1
-
-📝 License
-
-© 2025 Hunter Baucum. All rights reserved."# portfolio2.0" 
+This is a personal portfolio for Hunter Baucum. All rights reserved.
