@@ -22,7 +22,7 @@ export function FloatingSocials() {
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 1, duration: 0.5 }}
-      className="fixed left-1 md:left-2 lg:left-3 xl:left-5 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-2 lg:gap-3 xl:gap-4 z-50"
+      className="fixed left-1 md:left-2 lg:left-3 xl:left-5 top-1/2 -translate-y-1/2 flex flex-col gap-2 lg:gap-3 xl:gap-4 z-50"
     >
       {socials.map(({ Icon, href, label }, index) => (
         <motion.a
