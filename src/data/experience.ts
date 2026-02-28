@@ -18,13 +18,13 @@ export const experienceData: Experience[] = [
     duration: "Sept 2023 - Present",
     location: "Coppell, Tx, USA",
     description:
-      "As an Enterprise Applications Manager, I am a servant leader to the the development team and dedicate myself to be a preferred technology partner to our stakeholders.",
+      "As an Enterprise Applications Manager, I am a servant leader supporting development teams and a preferred technology partner to stakeholders.",
     achievements: [
-      "I have managed 50+ team members on various product initiatives",
-      "Built automation by creating data conversion, automated API, & service agent workflows  ",
+      "Managed 50+ team members on various product initiatives",
+      "Modernizing Insurance applications, integrations, and payment systems ",
+      "Automation workflows for data conversion, automated API, & service agent workflows  ",
       "Modernized Silverlight projects to Angular ecosystems while retaining the user experience",
-      "Enhanced communication and leadership capabilities",
-      "Helped students gain knowledge about ai and its usage in daily life "
+      "Enhanced communication and leadership capabilities"
     ],
     technologies: [
       "Leadership",
@@ -48,10 +48,10 @@ export const experienceData: Experience[] = [
     description:
       "Managed, organized, designed, and directed the Workforce Opportunity Services program for early career professionals. The desired outcome was to transition consultants to a full time position within AAA Auto Club Enterprises. ",
     achievements: [
-      "Converted 13 out of 14 consultants to full time positions",
-      "Modernized .Net projects to Salesforce",
-      "Modernized payment systems and enhanced billing systems",
-      "Delievered Data Engineering projects for data processing and warehousing"
+      "Delivered a 93% full-time conversion rate for the 2025 cohort",
+      "Consultants delivered modernization of On-Prem applications to Salesforce",
+      "Consultants delivered enhancements to payment and billing systems",
+      "Consultants delivered Data Engineering projects for data processing and warehousing"
 
     ],
     technologies: [
@@ -74,12 +74,12 @@ export const experienceData: Experience[] = [
     duration: "Oct 2020 - Sep 2023",
     location: "Coppell, TX, USA",
     description:
-      "Delivered Insurance solutions for all workflows within throughout our Policy Administration, Billing, and Integrations platform.",
+      "Delivered Insurance solutions for all workflows for Policy Administration, Billing, and Integrations platform.",
     achievements: [
-      "Delivered projects within Rating, UI enhancements, Document processing, Time Sensitive workflows, API Handling, & Data Processing",
-      "Modernized On-Prem Guidewire platform to the Cloud",
-      "Applied Agile methodologies to mentor team members, enable collaboration, business partnership, and stakeholder alignment",
-      "Served the product as a lead engineer and trusted technology partner"
+      "Delivered Rating, UI enhancements, Document processing, Time Sensitive workflows, API Handling, & Data Processing projects",
+      "Applied Agile methodologies to enable collaboration, business partnership, and stakeholder alignment",
+      "Modernized & converted On-Prem applications to Cloud while ensure enhanced user experience",
+      "Project lead mentoring team members and collaborated with stakeholders to earn trusted technology partner"
       
     ],
     technologies: [
@@ -104,7 +104,7 @@ export const experienceData: Experience[] = [
     achievements: [
       "Designed and improved UI/UX for Open Systems & Guidewire",
       "Developed applications and business workflows based on stakeholder feedback",
-      "Worked in an agile environment and learned business of software delivery",
+      "Agile environment working with developers, product owners, and scrum masters",
       "Upgraded Guidewire ClaimsCenter from On-Prem to Cloud based ecosystems"
     ],
     technologies: [

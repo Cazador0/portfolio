@@ -14,12 +14,13 @@ export const achievementsData: Achievement[] = [
     id: "aaa",
     title: "Enterprise Applications Manager",
     organization: "AAA Auto Club Enterprises",
-    description: "Serve as a people leader and technology expert to build robust teams to meet stakeholder requests.",
+    description: "Serve as a people leader and enterprise technology strategist, building high-performing teams that deliver scalable solutions aligned to business objectives.",
     impact: [
-      "Lead and developed over 120 sprints in an agile environment to deliver full stack solutions for the Insurance business life cycle",
-      "Cloud migrations for Guidewire, open systems and mainframe applications to the cloud base ecosystems",
-      "Coach & mentored 50+ team members with multiple disciplines including Guidewire, Java Apps, Salesforce, .Net suite, & Mainframe Apps",
-      "Foster a culture of curiosity, operational excellence, and personal accountability"
+        "Led 120+ Agile sprints delivering full-stack solutions across the Insurance lifecycle",
+        "Directed cloud migrations for Guidewire, open systems, and mainframe applications into cloud-based ecosystems",
+        "Mentored 50+ engineers across Guidewire, Java, Salesforce, .NET, and Mainframe disciplines",
+        "Established a culture of operational excellence, accountability, and continuous learning",
+        "Partnered with stakeholders to translate business requirements into technical roadmaps"
     ],
     
   },
@@ -28,12 +29,12 @@ export const achievementsData: Achievement[] = [
     id: "wos",
     title: "Program Director",
     organization: "Workforce Opportunity Solutions",
-    description: "Organizing senior managers and gathered leadership and material resources for the purpose of facilating a consultancy period leading to full time positions.",
+    description: "Led enterprise-aligned workforce development programs to build early-career technical talent pipelines.",
     impact: [
-      "13 out of 14 early career developers were onboarded to AAA Auto Club Enterprises with full time positions",
-      "Consultants built projects for Salesforce CRMs, .Net financial & payment systems, and data engineering",
-      "Coached and mentored consultants about Agile SDLC and collaborating with existing Dev Ops Engineers to meet product initiatives",
-      "Organized and planned executive sponsored events for the consultants to network and demonstrate projects"
+        "Delivered a 93% full-time conversion rate for the 2025 cohort, successfully placing 13 of 14 early-career developers into enterprise roles at AAA Auto Club Enterprises",
+        "Oversaw consultant delivery across Salesforce CRM, .NET financial systems, and data engineering initiatives",
+        "Coached consultants on Agile SDLC, DevOps collaboration, and enterprise delivery standards",
+        "Designed executive-sponsored showcases enabling consultants to present production-ready solutions"
     ],
 
   },
@@ -42,12 +43,26 @@ export const achievementsData: Achievement[] = [
     id: "activelearning",
     title: "Administrative Director & Instructor",
     organization: "Active Learning Solutions",
-    description: "Lead courses on the game theory of chess and video game design using Unity.",
+    description: "Directed STEM-focused enrichment programs combining strategic thinking and game development.",
     impact: [
-      "Lead over 10 camps teaching over 100 students chess and video game design",
-      "Taught early, middle, and late game chess theory to prepare students for chess tournaments",
-      "Built servers to facilitate Unity base video game design to teach students how to connect the worlds they built",
-      "Endorsed collaboration and creativity by creating an environment for students to learn and present their ideas based on games they built"
+        "Led 10+ camps serving 100+ students in chess theory and Unity-based game design",
+        "Taught advanced chess strategy (opening, middle, endgame) preparing students for tournament play",
+        "Built server environments enabling collaborative Unity game development",
+        "Fostered creativity and presentation skills through project-based learning"
+    ],
+
+  },
+
+ {
+    id: "esports",
+    title: "Esports Tournament Organization",
+    organization: "Pixel Sports Media",
+    description: "Driving North Texas Esports on college campuses and the surrounding local business supporting tournaments for power rankings in the region.",
+    impact: [
+        "Built streaming overlays and broadcast assets",
+        "Organized ranked tournaments and competitive brackets",
+        "Partnered with local sponsors and campus organizations to drive event engagement",
+        "Promoted high potential player engagement by connecting individuals with local tournaments"
     ],
 
   }
@@ -113,7 +128,7 @@ export const milestonesData: Milestones[] = [
     id: "aaa-leadership",
     title: "Promotion to Resource Management",
     organization: "AAA Auto Club Enterprises",
-    description: "My journey has led me to enable my leadership skills to challenge myself as a resource manager. This evolution has required patience, trust, and communication on scale. This is only the start, and I thank my family for supporting me through this transformation.  ",
+    description: "Promoted to Resource Manager, expanding scope to enterprise workforce planning, capacity modeling, and cross-functional team allocation at scale.  ",
     impact: [],
   },
 
@@ -138,15 +153,6 @@ export const milestonesData: Milestones[] = [
     title: "Promotion from Instructor to Director",
     organization: "Active Learning Solutions",
     description: "While serving as an instructor for Chess game theory and video game design. This experience showed trust to work with private school stakeholders and parents to lead other instructors as a Director",
-    impact: [],
-
-  },
-
-{
-    id: "esports",
-    title: "Pixel Sport Media",
-    organization: "Esports Tournament Organization",
-    description: "Through UNT Esports on campus and the surrounding local business supporting the scene, I had the please to build streaming overlays, facilitate power ranked tournaments, and partner with companies to promote tournaments. ",
     impact: [],
 
   }
