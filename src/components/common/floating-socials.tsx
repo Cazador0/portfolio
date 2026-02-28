@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, type LucideProps } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
@@ -17,12 +18,26 @@ const socials: SocialItem[] = [
 ];
 
 export function FloatingSocials() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
+
   return (
     <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0, ...(isMobile ? { y: -20 } : { x: -20 }) }}
+      animate={{ opacity: 1, ...(isMobile ? { y: 0 } : { x: 0 }) }}
       transition={{ delay: 1, duration: 0.5 }}
-      className="fixed left-1 md:left-2 lg:left-3 xl:left-5 top-1/2 -translate-y-1/2 flex flex-col gap-2 lg:gap-3 xl:gap-4 z-50"
+      className="fixed
+        top-20 left-1/2 -translate-x-1/2 flex-row
+        md:top-1/2 md:left-2 md:-translate-y-1/2 md:translate-x-0 md:flex-col
+        lg:left-3 xl:left-5
+        flex gap-2 lg:gap-3 xl:gap-4 z-50"
     >
       {socials.map(({ Icon, href, label }, index) => (
         <motion.a
@@ -30,14 +45,14 @@ export function FloatingSocials() {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, ...(isMobile ? { y: -20 } : { x: -20 }) }}
+          animate={{ opacity: 1, ...(isMobile ? { y: 0 } : { x: 0 }) }}
           transition={{ delay: 1.2 + index * 0.1, duration: 0.4 }}
           whileHover="hovered"
           whileTap={{ scale: 0.95 }}
           variants={{
             hovered: {
-              x: 4,
+              ...(isMobile ? { y: -4 } : { x: 4 }),
               transition: { type: "spring", stiffness: 400, damping: 20, delay: 0 },
             },
           }}
