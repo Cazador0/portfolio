@@ -70,7 +70,7 @@ export const experienceData: Experience[] = [
   {
     id: "devops-engineer",
     company: "AAA Auto Club Enterprises",
-    role: "DevOps Engineer",
+    role: "Lead DevOps Engineer",
     duration: "Oct 2020 - Sep 2023",
     location: "Coppell, TX, USA",
     description:
